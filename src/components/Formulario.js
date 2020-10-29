@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import {nanoid} from 'nanoid';
 
-const Formulario = () =>{
+const Formulario = ({crearCita}) =>{
 
     //State de cita
     const [cita, setCita] =useState({
@@ -43,7 +43,7 @@ const Formulario = () =>{
         cita.id= nanoid();
 
         // Crear la cita
-
+        crearCita(cita);
 
         // Reiniciar el form
     }
